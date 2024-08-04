@@ -1,0 +1,58 @@
+/* styles.css */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+#game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 1px solid #000;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.highlight {
+    color: #f50000;
+}
+
+.highlight-win {
+    color: #0fe645;
+}
+
+.strike-through {
+    position: relative;
+}
+
+.strike-through::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
