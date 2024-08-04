@@ -1,3 +1,3 @@
-Infinite Tic Tac Toe!
+### Infinite Tic Tac Toe!
 
 Built using HTML, CSS and JS
