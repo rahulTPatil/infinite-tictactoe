@@ -15,7 +15,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    gap: 7px;
+    gap: 12px;
 }
 
 .cell {
@@ -39,7 +39,6 @@ body {
 .highlight {
     opacity: 0.8;
     background-color: #000000;
-    font-variant-emoji: emoji;
 }
 
 .highlight-win {
