@@ -1,7 +1,7 @@
 // script.js
 const cells = document.querySelectorAll('.cell');
 const statusText = document.getElementById('status');
-let currentPlayer = 'X';
+let currentPlayer = '❌';
 let gameBoard = ['', '', '', '', '', '', '', '', ''];
 let gameActive = true;
 const gameArray = []
@@ -34,26 +34,26 @@ function handleCellClick(event) {
         statusText.textContent = `${currentPlayer} wins!`;
         gameActive = false;
     } else if (gameBoard.includes('')) {
-        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        currentPlayer = currentPlayer === '❌' ? '🇴' : '❌';
         statusText.textContent = `Player ${currentPlayer}'s turn`;
     } else {
         statusText.textContent = `It's a draw!`;
         gameActive = false;
     }
 
-    if(gameArray.length == 5){
+    if (gameArray.length == 5) {
         cells[gameArray[0]].classList.add('highlight');
     }
 
-    if(gameArray.length > 5){
+    if (gameArray.length > 5) {
         var tar = gameArray.shift();
-        console.log("TAR: ",tar);
+        console.log("TAR: ", tar);
         gameBoard[tar] = '';
         cells[tar].textContent = '';
         cells[tar].classList.remove('highlight');
-        !checkWin()?cells[gameArray[0]].classList.add('highlight'):'';
+        !checkWin() ? cells[gameArray[0]].classList.add('highlight') : '';
     }
-    
+
 }
 
 function checkWin() {
